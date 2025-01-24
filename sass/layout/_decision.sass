@@ -1,0 +1,76 @@
+.decision
+  margin-bottom: 8rem
+  transition: all .3s ease-out
+  &__cards
+    display: flex
+    justify-content: center
+    gap: 0
+    transition: all .3s ease-out
+  &__card
+    width: 35rem
+    height: 59rem
+    position: relative
+    transition: all .3s ease-out
+    &:not(:last-child)
+      border-right: .5rem solid $color-light-gray
+    &:hover
+      transition: all .3s ease-out
+      background: linear-gradient(21deg, rgba(255,252,0,1) 0%, rgba(66,55,125,0.6980042016806722) 47%, rgba(81,65,161,0.8) 68%, rgba(255,252,0,0.7484243697478992) 100%)
+      .decision__card-img
+        z-index: 1
+        transition: all .3s ease-out
+      .decision__card-title
+        top: 8%
+        transition: all .3s ease-out
+        left: 11%
+        z-index: 3
+      .decision__card-text
+        display: inline-block
+        transition: all .3s ease-out
+        top: 30%
+        left: 11%
+        z-index: 3
+        color: $color-black
+      .decision__card-illustration
+        display: inline-block
+        transition: all .3s ease-out
+      .decision__card-more
+        transition: all .3s ease-out
+        display: inline-block
+
+
+    &-img
+      position: absolute
+      top: 13%
+      left: 50%
+      transform: translateX(-50%)
+      transition: all .3s ease-out
+      @include respond(tab-port)
+        width: 70%
+    &-title
+      position: absolute
+      top: 46%
+      transition: all .3s ease-out
+      left: 11%
+    &-text
+      position: absolute
+      display: none
+      transition: all .3s ease-out
+    &-illustration
+      position: absolute
+      display: none
+      bottom: 0
+      left: 0
+      width: 100%
+      transition: all .3s ease-out
+      &-3
+        bottom: 1rem
+    &-more
+      position: absolute
+      right: 10%
+      bottom: 8%
+      display: none
+      transition: all .3s ease-out
+      @include respond(tap-port)
+        width: 50%
+        right: 0

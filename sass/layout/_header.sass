@@ -1,0 +1,92 @@
+.header
+  min-height: 100vh
+  background-image: url("../img/header-bg.jpg")
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  position: relative
+  margin-bottom: 10rem
+  &__text
+    display: flex
+    align-items: center
+    margin-bottom: 6rem
+  &__desc
+  &__second-title
+    font-weight: 400
+    font-size: 4.5rem
+    font-family: "Press Start 2P", sans-serif
+    line-height: 120
+    letter-spacing: .2rem
+    text-transform: uppercase
+    @include white-stroke
+    display: none
+    &--active
+      display: inline-block
+  &__top
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 4rem 1rem 0
+    margin-bottom: 11rem
+  &__body
+  &__logo
+    position: absolute
+    right: -22%
+    bottom: -37%
+    overflow: hidden
+    @include respond(tab-lend)
+      width: 60%
+      height: auto
+      bottom: -20%
+  &__pop-up
+    transition: all .3s ease-out
+    &-btn-open
+      background-color: transparent
+    &-btn-close
+    &:hover
+      cursor: pointer
+      .header__menu:hover path
+        fill: $color-white
+        fill-opacity: 1
+        transition: all .3s ease-out
+
+  &__menu
+
+    &-close
+      fill: $color-white
+      fill-opacity: 1
+      transform: rotateZ(45deg)
+      transition: all .3s ease-out
+
+.dialog
+  position: fixed
+  margin: 0
+  width: auto
+  height: 100vh
+  &::backdrop
+    background-image: url(../img/menuBG.png)
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+  &__inner
+
+.header__text
+  position: relative
+
+
+.header__second-title 
+  position: absolute
+  left: 36rem
+  opacity: 0
+  transition: opacity 0.5s ease, transform 0.5s ease
+
+
+.header__second-title--active 
+  opacity: 1
+  transform: translateY(0)
+
+
+.header__second-title:not(.header__second-title--active) 
+  transform: translateY(-20px)
+
+К

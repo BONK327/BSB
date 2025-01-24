@@ -1,0 +1,41 @@
+button
+  position: relative
+  display: inline-block
+  cursor: pointer
+  outline: none
+  border: 0
+  vertical-align: middle
+  text-decoration: none
+  font-size: inherit
+  font-family: inherit
+
+
+.btn
+  font-size: 2.5rem
+  font-family: "Handjet", sans-serif
+  color: $color-purple
+  font-weight: 900
+  letter-spacing: .2rem
+  padding: 1rem 4rem
+  outline: 0
+  cursor: pointer
+  position: absolute
+  background-color: $color-yellow
+  touch-action: manipulation
+  transition: transform 0.2s, border 0.2s
+
+  &:hover
+    border: solid .1rem $color-light-purple
+    transform: translate(-1rem, -1rem)
+
+.btn:after
+  content: ""
+  width: 100%
+  z-index: -1
+  height: 100%
+  right: 0
+  transition: transform 0.2s
+  transform: translate3d(0, 0, -1rem)
+
+.btn:hover:after
+  transform: translate3d(0, 0, -1rem)

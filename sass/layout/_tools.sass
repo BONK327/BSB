@@ -1,0 +1,69 @@
+.tools
+  transition: all 10s ease
+  &__to-right
+    display: flex
+    gap: 14.4rem
+    flex-wrap: nowrap
+    animation: to-left 70s linear infinite
+    animation-fill-mode: both
+    max-width: 100%
+    margin-bottom: 15rem
+  &__to-left
+    display: flex
+    gap: 14.4rem
+    flex-wrap: nowrap
+    animation: to-right 70s linear infinite
+    max-width: 100%
+    margin-bottom: 8rem
+
+  &__grid-1
+    display: grid
+    grid-template-columns: 30% auto
+    gap: 4rem
+    align-items: center
+    margin-bottom: 15rem
+    &-content
+      padding: 3rem 4rem 0 0
+  &__text
+    overflow: hidden
+    text-overflow: ellipsis
+    display: -webkit-box
+    -webkit-line-clamp: 4
+    -webkit-box-orient: vertical
+  &__grid-2
+    display: grid
+    grid-template-columns: auto 30%
+    gap: 4rem
+    margin-bottom: 15rem
+    align-items: center
+    &-content
+      padding: 3rem 4rem 0 0
+  &__img
+    position: relative
+    top: 20%
+    &-yellow
+      padding: 6rem 0 0 4rem
+      @include respond(tab-port)
+        max-width: 90%
+    &-purple
+      position: absolute
+      left: 5rem
+      top: 14rem
+      @include respond(tab-port)
+        max-width: 60%
+  &__title
+    font-size: 4rem
+    margin-bottom: 2.4rem
+    max-width: 64rem
+    @include respond(tab-port)
+      margin-bottom: 2rem
+  &__text
+
+.eye,
+.lock
+  @include respond(tab-port)
+  max-width: 90%
+
+.btn__location
+  margin: 6rem 0 0 1rem
+

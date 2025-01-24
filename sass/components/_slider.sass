@@ -1,0 +1,70 @@
+.swiper
+  margin-bottom: 13rem
+  display: flex
+  position: relative
+
+  &-button-next::after 
+    display: none
+  &-button-prev::after 
+    display: none
+
+.swiper-wrapper
+  @include respond(tab-port)
+    margin-bottom: 8rem
+
+  .swiper-slide
+    text-align: center
+    width: 12rem
+    height: 15.4rem
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    filter: grayscale(100%)
+    opacity: .5
+    transition: all .2s ease
+    position: relative
+    &:hover
+      filter: grayscale(0)
+      opacity: 1
+    &__img
+      top: auto
+      position: absolute
+    &__title
+      position: absolute
+      color: $color-yellow
+      bottom: 0
+    img 
+      display: block
+      object-fit: cover
+
+
+
+
+.swiper-buttons 
+  display: flex
+  position: absolute // Позиционирование кнопок
+  top: 70% // Центрирование по вертикали
+  transform: translateY(-30%) // Центрирование по вертикали
+  left: 10vw // Выравнивание по левому краю
+  right: 10vw // Выравнивание по правому краю
+  justify-content: space-between // Распределение кнопок по краям
+  @include respond(tab-lend)
+    top: 30% /* Позиция для меньших экранов */
+    position: relative /* Изменяем на относительное позиционирование */
+    justify-content: center /* Центрируем кнопки по горизонтали */
+    gap: 4rem /* Промежуток между кнопками */
+    left: 0 /* Убираем отступ слева */
+    right: 0 /* Убираем отступ справа */
+    align-self: flex-start
+
+  &__prev,
+  &__next 
+    cursor: pointer // Указатель при наведении
+
+.swiper-button-disabled
+  opacity: .3
+  cursor: default
+
+.mySwiper1
+  margin-bottom: 10rem

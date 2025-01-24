@@ -1,0 +1,29 @@
+@mixin text-gradient
+    background: linear-gradient(17deg, rgba(223, 220, 1, 1) 0%, rgba(223, 220, 1, 1) 49%, rgba(45, 38, 80, 1) 49%, rgba(45, 38, 80, 1) 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    -webkit-text-stroke: .4rem $color-purple
+
+@mixin white-stroke
+    -webkit-text-stroke: .3rem $color-white
+    -webkit-text-fill-color: transparent
+    -webkit-background-clip: text
+    background-clip: text
+    color: transparent
+
+@mixin respond($breakpoint)
+    @if $breakpoint == phone
+        @media only screen and (max-width: 768px)
+            @content
+
+    @if $breakpoint == tab-port
+        @media only screen and (max-width: 1000px)
+            @content
+
+    @if $breakpoint == tab-lend
+        @media only screen and (max-width: 1350px)
+            @content
+
+    @if $breakpoint == big-screen
+        @media only screen and (min-width: 1800px)
+            @content

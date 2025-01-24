@@ -1,0 +1,116 @@
+.contacts
+  margin-bottom: 8rem
+  &__form
+    padding: 4rem 5.5rem
+    width: 100%
+    height: 62.5rem
+    border-radius: .7rem
+    border: solid .3rem $color-border-purple
+    box-shadow: 0 .1rem 2.4rem rgba(0, 0, 0, .1)
+    &-title
+      margin-bottom: 3.6rem
+    &-text
+      font-family: "PT Sans", sans-serif
+      font-size: 1rem
+      font-weight: 400
+      width: 20rem
+      text-align: right
+      color: $color-stroke
+      @include respond(tab-lend)
+        font-size: 1.2rem
+        width: 30rem
+
+.form
+  position: relative
+  &__button
+    display: flex
+    justify-content: flex-end
+    gap: 3.2rem
+  input[type='text']
+    width: 100%
+    margin-bottom: 3.6rem
+    padding: 2rem
+    border: solid .2rem $color-stroke
+    border-radius: .7rem
+    transition: all .2s ease-out
+    &:hover
+      border: solid .2rem $color-yellow
+      transition: all .2s ease-out
+    &::placeholder
+      font-family: "PT Sans", sans-serif
+      font-size: 1.4rem
+      color: $color-black
+  input[type='number']
+    width: 48.2rem
+    padding: 2rem
+    border-radius: .7rem
+    border: solid .2rem $color-stroke
+    transition: all .2s ease-out
+    @include respond(tab-port)
+      width: 43rem
+    &:hover
+      border: solid .2rem $color-yellow
+      transition: all .2s ease-out
+    &::placeholder
+      font-family: "PT Sans", sans-serif
+      font-size: 1.4rem
+      color: $color-black
+  input[type='email']
+    width: 48.2rem
+    padding: 2rem
+    border-radius: .7rem
+    border: solid .2rem $color-stroke
+    transition: all .2s ease-out
+    @include respond(tab-port)
+      width: 43rem
+    &:hover
+      border: solid .2rem $color-yellow
+      transition: all .2s ease-out
+    &::placeholder
+      font-family: "PT Sans", sans-serif
+      font-size: 1.4rem
+      color: $color-black
+  textarea[type='text']
+    width: 100%
+    height: 20.2rem
+    border: solid .2rem $color-stroke
+    border-radius: .7rem
+    padding: 2rem
+    margin-bottom: 3.6rem
+    resize: none
+    transition: all .2s ease-out
+    &:hover
+      border: solid .2rem $color-yellow
+      transition: all .2s ease-out
+    &::placeholder
+      font-family: "PT Sans", sans-serif
+      font-size: 1.4rem
+      color: $color-black
+  input[type='submit']
+    background-color: $color-yellow
+    border: none
+    padding: 1rem 4rem
+    color: $color-light-purple
+    font-weight: 900
+    font-size: 2.5rem
+    font-family: "Handjet", sans-serif
+    letter-spacing: .2rem
+    cursor: pointer
+    position: relative
+    transition: all .3s ease-out
+    &:hover
+      transform: translate(-1rem, -1rem)
+      border: solid .1rem $color-light-purple
+      transition: all .3s ease-out
+      input[type='submit']::after
+        content: ''
+        background: url("img/Psevdo.svg") cover center / no-repeat
+        position: absolute
+        left: -1rem
+        top: -1rem
+        transform: translate(-1rem, 1rem)
+
+.input-box
+  display: flex
+  justify-content: space-between
+  margin-bottom: 3.6rem

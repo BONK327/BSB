@@ -1,0 +1,67 @@
+.footer
+  position: relative
+  &__bg
+    width: 100vw
+
+  &__content
+    height: 41rem
+    width: 100%
+    z-index: 10
+    &-logo
+      align-self: flex-start
+  &__flex
+    display: flex
+    justify-content: space-between
+    gap: 4.2rem
+    margin-bottom: 4.2rem
+
+  &__menu
+    &-title
+      margin-bottom: 1.6rem
+      &:hover
+        text-decoration: underline $color-yellow
+        text-underline-position: under
+    &-grid
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      grid-template-rows: repeat(2, auto)
+      gap: 2.4rem 5rem
+  &__item:hover
+    text-decoration: underline $color-purple
+      text-underline-position: under
+  &__item:not(:last-child)
+    margin-bottom: 1.2rem
+
+
+  &__contacts
+    width: auto
+    text-align: right
+    &-number
+      margin-bottom: .7rem
+    &-email
+      margin-bottom: 1.6rem
+    &-address
+      margin-bottom: 1.6rem
+
+    &-logos
+      display: flex
+      gap: .7rem
+      justify-content: right
+.footer__vk
+
+.footer__tg
+
+.yellow-line
+  max-width: 100rem
+  height: .3rem
+  background-color: $color-yellow
+  margin: 4.2rem auto
+
+
+.flex__info
+  display: flex
+  justify-content: space-between
+
+.data
+  font-size: 1.4rem
+  margin-bottom: 5rem
